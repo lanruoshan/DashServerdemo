@@ -13,4 +13,5 @@ dash\
 dash_html_components\
 plotly.graph_objs \
 pandas\
+os\
 }
