@@ -47,5 +47,8 @@ def display_page(pathname):
         return layout_index
 
 if __name__ == '__main__':
+    from werkzeug.contrib.fixers import ProxyFix
 
-     app.run_server(debug=True,host='0.0.0.0')
+    server.wsgi_app = ProxyFix(server.wsgi_app)
+
+    app.run_server(debug=True,host='0.0.0.0')
